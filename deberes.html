@@ -396,17 +396,5 @@
             </div>
         </div>
     </div>
-
-    <!-- Pequeño script para simular acción de botones (opcional) -->
-    <script>
-        document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const buttonText = btn.classList.contains('btn-primary') ? 'Ver' : 'Vista previa';
-                const cardTitle = btn.closest('.task-card').querySelector('.task-number').innerText;
-                alert(`Has hecho clic en "${buttonText}" de ${cardTitle} (demostración interactiva)`);
-            });
-        });
-    </script>
 </body>
 </html>
