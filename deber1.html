@@ -47,8 +47,9 @@
         }
 
         iframe {
-            width: 600px;      
-            height: 340px;     
+            width: 80%;        /* ocupa el 80% del contenedor */
+            max-width: 720px;  /* ancho máximo para que no se vea gigante */
+            height: 405px;     /* altura proporcional a 16:9 */
             border: none;
             display: block;
             margin: 0 auto;    
@@ -75,13 +76,13 @@
 <div class="container">
 
     <h1> Deber: Sentencia IF </h1>
-    <h2> Video </h2>
+    
+    <h2>🎥 Video explicativo</h2>
 
     <div class="video">
         <iframe src="https://drive.google.com/file/d/17O-Tf26O4P40qpTRprAqR7Y6I8yN8vak/preview"
         allow="autoplay"></iframe>
     </div>
-
 
     <h2>¿Qué es la sentencia if?</h2>
 
@@ -95,7 +96,6 @@
         Si la condición es verdadera, se ejecuta una acción; si no, puede ejecutar otra usando <b>else</b>.
     </p>
 
-    
     <a href="deberes.html" class="btn">⬅ Volver</a>
 
 </div>
