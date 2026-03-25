@@ -119,28 +119,78 @@
     <h2>Código fuente</h2>
 
     <pre>
+<h2>Código fuente</h2>
+
+<pre>
 <code>
+# Función para calcular el IMC
 def calcularImc():
-    peso = float(entry_peso.get())
-    altura = float(entry_altura.get())
+    try:
+        # Obtener datos ingresados por el usuario
+        peso = float(entry_peso.get())
+        altura = float(entry_altura.get())
 
-    if altura <= 0 or peso <= 0:
-        messagebox.showerror("Error", "Valores inválidos")
-        return
+        # Validar que los valores sean positivos
+        if altura <= 0 or peso <= 0:
+            messagebox.showerror("Error", "Valores inválidos")
+            return
 
-    imc = peso / (altura ** 2)
+        # Calcular el IMC
+        imc = peso / (altura**2)
 
-    if imc < 18.5:
-        estado = "Peso Bajo"
-    elif imc < 24.9:
-        estado = "Peso Normal"
-    elif imc < 29.9:
-        estado = "Sobrepeso"
-    else:
-        estado = "Obesidad"
+        # Clasificar el resultado
+        if imc < 18.5:
+            estado = "Peso Bajo"
+        elif imc < 24.9:
+            estado = "Peso Normal"
+        elif imc < 29.9:
+            estado = "Sobrepeso"
+        else:
+            estado = "Obesidad"
 
-    resultado.set(f"IMC: {imc:.2f} - {estado}")
+        # Mostrar el resultado en la interfaz
+        resultado.set(f"IMC: {imc:.2f} - {estado}")
+
+    except ValueError:
+        # Mostrar error si el usuario ingresa texto
+        messagebox.showerror("Error", "Ingrese números válidos")
+
+
+# Crear ventana principal
+ventana = tk.Tk()
+ventana.title("Calculadora IMC")
+ventana.geometry("300x300")
+ventana.config(bg="plum")
+
+# Título
+tk.Label(ventana, text="Calculadora IMC", bg="plum",
+font=("arial",14,"bold")).pack()
+
+# Entrada de peso
+tk.Label(ventana, text="Peso (kg)", bg="plum").pack()
+entry_peso = tk.Entry(ventana)
+entry_peso.pack()
+
+# Entrada de altura
+tk.Label(ventana, text="Altura (m)", bg="plum").pack()
+entry_altura = tk.Entry(ventana)
+entry_altura.pack()
+
+# Botón para calcular
+tk.Button(ventana, text="Calcular",
+command=calcularImc, bg="purple", fg="white").pack()
+
+# Variable para mostrar resultado
+resultado = tk.StringVar()
+
+# Mostrar resultado
+tk.Label(ventana, textvariable=resultado,
+bg="plum", font=("arial",12,"bold")).pack()
+
+# Ejecutar la aplicación
+ventana.mainloop()
 </code>
+</pre>
     </pre>
 
     <a href="deberes.html" class="btn">⬅ Volver</a>

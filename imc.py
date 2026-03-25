@@ -1,19 +1,19 @@
 #IMPORTAR LA LIBRERIA PARA CREAR LA INTERFAZ
 import tkinter as tk 
-from tkinter import messagebox
+from tkinter import messagebox #libreria para mostrar mensajes de error 
 #definir la funcion
 def calcularImc():
     try:
         peso=float(entry_peso.get()) #ingresar valores decimales
         altura=float(entry_altura.get())
         if altura <=0 or peso <=0:
-            messagebox.showerror("Error" , "Valores Invalidos")
+            messagebox.showerror("Error" , "Valores Invalidos") #muestar erroe n caso se ingrese un valor igual o menor a 0 
             #return para calcular imc
             return
         imc = peso / (altura**2) #formula imc 
         #clasificar el imc
         if imc <18.5:
-            estado="Peso Bajo"
+            estado="Peso Bajo" #si cumple la condicion se muestra el mensaje 
         elif imc >=18.5 and imc <24.9:
             estado="Peso normal"
         elif imc >=25 and imc <29.9:
@@ -21,14 +21,14 @@ def calcularImc():
         else:
             estado="Obesidad"
             #mostrar resultado
-        resultado.set(f"IMC : {imc:.2f}\n Estado{estado}")
+        resultado.set(f"IMC : {imc:.2f}\n Estado{estado}") #muestra el resuktado 
     except ValueError:
         messagebox.showerror("Erro","Ingrese numeros validos" )
         #ventana
 ventana=tk.Tk() #CREAR LA VENTANA
-ventana.title("Calculadora IMC")
-ventana.geometry("300x300")
-ventana.config(bg="plum")
+ventana.title("Calculadora IMC")#titulo a la ventana 
+ventana.geometry("300x300") #tamaño
+ventana.config(bg="plum") #color de fondo 
 #elemtos que iran en la ventana
 tk.Label(ventana,text="Calculadora imc",bg="plum",font=("arial",14,"bold"),fg="black").pack()
 #label y la cjaa de texto para el peso
