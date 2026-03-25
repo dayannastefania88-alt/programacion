@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Deber funciones  </title>
+    <title>Lecciones</title>
 
     <style>
         body {
@@ -25,7 +25,6 @@
 
         h1 {
             color: #e60073;
-            margin-bottom: 20px;
         }
 
         h2 {
@@ -39,20 +38,30 @@
             line-height: 1.6;
         }
 
-        .video {
-            margin-top: 25px;
-            border-radius: 15px;
-            text-align: center; 
-            overflow: visible;  
+        iframe {
+            width: 80%;
+            max-width: 720px;
+            height: 405px;
+            border: 2px solid #ff69b4;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        iframe {
-            width: 80%;        
-            max-width: 720px;  
-            height: 405px;     
-            border: none;
-            display: block;
-            margin: 0 auto;    
+        img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 12px;
+            margin-top: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        pre {
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            text-align: left;
         }
 
         .btn {
@@ -75,34 +84,64 @@
 
 <div class="container">
 
-    <h1> Actividades en clase </h1>
+    <h1>Actividades en clase</h1>
     
-    <h2> Calculadora Imc (Indice Masa Corporal) </h2> 
-    <div class="video" style="text-align:center; margin-top:20px;">
+    <h2>Calculadora IMC (Índice de Masa Corporal)</h2> 
+
+    <!-- 🎥 VIDEO -->
     <iframe 
-    src="https://drive.google.com/file/d/1AZTn4G2_OjL2tjLrUpsyoKdnauxOOPqO/preview" 
-    width="640" 
-    height="480" 
-    allow="autoplay" 
-    allowfullscreen
-    style="border:2px solid #ff69b4; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-</iframe>
+        src="https://drive.google.com/file/d/1AZTn4G2_OjL2tjLrUpsyoKdnauxOOPqO/preview" 
+        allow="autoplay" 
+        allowfullscreen>
+    </iframe>
 
-   <h2>Calculadora Imc </h2>
+    <!-- 📝 EXPLICACIÓN -->
+    <h2>Descripción</h2>
 
-<p>
-    En esta calculadora, se utiliza una <b>función</b> para calcular el Índice de Masa Corporal (IMC) 
-    a partir del peso y la altura ingresados por el usuario. La función está <b>definida</b> para 
-    recibir estos valores, aplicar la fórmula correspondiente y mostrar el resultado en pantalla. 
-    Además, permite <b>clasificar el estado</b> de la persona (bajo peso, normal, sobrepeso u obesidad), 
-    lo que facilita la interpretación del resultado. Esto ayuda a mantener el código organizado, 
-    reutilizable y fácil de entender.
-</p>
+    <p>
+        En esta calculadora, se utiliza una <b>función</b> para calcular el Índice de Masa Corporal (IMC) 
+        a partir del peso y la altura ingresados por el usuario. La función está <b>definida</b> para 
+        recibir estos valores, aplicar la fórmula correspondiente y mostrar el resultado en pantalla. 
+        Además, permite <b>clasificar el estado</b> de la persona (bajo peso, normal, sobrepeso u obesidad).
+    </p>
 
-<p>
-    Una función puede recibir datos de entrada llamados <b>parámetros</b> y devolver un resultado. 
-    Esto facilita la creación de programas más ordenados, eficientes y fáciles de entender.
-</p>
+    <p>
+        Una función puede recibir datos de entrada llamados <b>parámetros</b> y devolver un resultado, 
+        lo que facilita la organización y reutilización del código.
+    </p>
+
+    <!-- 🖼️ CAPTURA -->
+    <h2>Captura de la interfaz</h2>
+
+    <img src="imc.png" alt="Captura calculadora IMC">
+
+    <!-- 💻 CÓDIGO -->
+    <h2>Código fuente</h2>
+
+    <pre>
+<code>
+def calcularImc():
+    peso = float(entry_peso.get())
+    altura = float(entry_altura.get())
+
+    if altura <= 0 or peso <= 0:
+        messagebox.showerror("Error", "Valores inválidos")
+        return
+
+    imc = peso / (altura ** 2)
+
+    if imc < 18.5:
+        estado = "Peso Bajo"
+    elif imc < 24.9:
+        estado = "Peso Normal"
+    elif imc < 29.9:
+        estado = "Sobrepeso"
+    else:
+        estado = "Obesidad"
+
+    resultado.set(f"IMC: {imc:.2f} - {estado}")
+</code>
+    </pre>
 
     <a href="deberes.html" class="btn">⬅ Volver</a>
 
