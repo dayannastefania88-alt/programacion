@@ -4,7 +4,7 @@ lista = []
 
 def agregarNotas():
     if entry.get() != "":
-        nota = int(entry.get())
+        nota = float(entry.get())
         entry.delete(0, "end")
         lista.append(nota)
 

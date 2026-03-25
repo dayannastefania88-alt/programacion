@@ -7,6 +7,7 @@
   },
   "editor.suggestOnTriggerCharacters": true,
   "editor.inlineSuggest.enabled": true,
-  "python.analysis.autoImportCompletions": true
+  "python.analysis.autoImportCompletions": true,
+  "python.REPL.enableREPLSmartSend": false
 
 }
