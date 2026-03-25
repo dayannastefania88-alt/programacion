@@ -132,7 +132,10 @@ h1{
 
 <div class="button-group">
 <a href="deber1.html" class="btn btn-primary">Ver</a>
-<a href="deber1.html" class="btn btn-secondary">Vista previa</a>
+<button class="btn btn-secondary" 
+        onclick="mostrarMensaje('Aquí se presentan ejercicios utilizando la sentencia if para la toma de decisiones.')">
+            Vista previa
+        </button>
 </div>
 </div>
 
@@ -147,7 +150,10 @@ h1{
 
 <div class="button-group">
 <a href="deber2.html" class="btn btn-primary">Ver</a>
-<a href="deber2.html" class="btn btn-secondary">Vista previa</a>
+<button class="btn btn-secondary" 
+        onclick="mostrarMensaje('Aquí se presentan ejercicios utilizando bucles ya sea while o for ')">
+            Vista previa
+        </button>
 </div>
 </div>
 
@@ -162,7 +168,10 @@ h1{
 
 <div class="button-group">
 <a href="deber3.html" class="btn btn-primary">Ver</a>
-<a href="deber3.html" class="btn btn-secondary">Vista previa</a>
+<button class="btn btn-secondary" 
+        onclick="mostrarMensaje('Aquí se presentan ejercicios con funciones explicado uno a uno .')">
+            Vista previa
+        </button>
 </div>
 </div>
 
@@ -177,7 +186,10 @@ h1{
 
 <div class="button-group">
 <a href="Lecciones.html" class="btn btn-primary">Ver</a>
-<a href="Lecciones.html" class="btn btn-secondary">Vista previa</a>
+<button class="btn btn-secondary" 
+        onclick="mostrarMensaje('Aquí se presentan un video explicativo de la leccion calcular Imc con captura de interfaz y codigo ')">
+            Vista previa
+        </button>
 </div>
 </div>
 
@@ -185,24 +197,27 @@ h1{
 <div class="task-card">
 <div class="card-header">
 <div class="icon-wrapper"><i class="fas fa-database"></i></div>
-<span class="task-number">Deber 5</span>
+<span class="task-number">Actividades en clase </span>
 </div>
 
 <p class="task-description">Backend API</p>
 
 <div class="button-group">
 <a href="Actividadesclase.html" class="btn btn-primary">Ver</a>
-<a href="Actividadesclase.html" class="btn btn-secondary">Vista previa</a>
+<button class="btn btn-secondary" 
+        onclick="mostrarMensaje('Aquí se presentan aplicaciones con tkinter realizadas en clase con un video y presentando una peuqeña descripcion .')">
+            Vista previa
+        </button>
 </div>
 
-<div class="card-footer">5 días restantes</div>
+<div class="card-footer"></div>
 </div>
 
 <!-- DEBER 6 -->
 <div class="task-card">
 <div class="card-header">
 <div class="icon-wrapper"><i class="fas fa-robot"></i></div>
-<span class="task-number">Deber 6</span>
+<span class="task-number">Examenes</span>
 </div>
 
 <p class="task-description">Pruebas unitarias</p>
@@ -217,6 +232,11 @@ h1{
 
 </div>
 </div>
+<script>
+function mostrarMensaje(texto) {
+    alert(texto);
+}
+</script>
 
 </body>
 </html>
