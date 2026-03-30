@@ -1,115 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecciones</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecciones</title>
 
-    <style>
-        /* ===== Estilos generales ===== */
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffe4e6, #ffc0cb); /* degradado rosado suave */
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4e6, #ffc0cb);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-        .container {
-            background: white;
-            width: 90%;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
 
-        h1 {
-            color: #e60073;
-            margin-bottom: 20px;
-        }
+.seccion {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 30px;
+}
 
-        h2 {
-            color: #e60073;
-            margin: 25px 0 10px 0;
-        }
+h1 {
+    color: #e60073;
+    margin-bottom: 20px;
+}
 
-        p {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.6;
-            margin: 10px 0 20px 0;
-        }
+h2 {
+    color: #e60073;
+    margin: 20px 0 10px 0;
+}
 
-        iframe, img {
-            width: 100%;
-            height: auto;
-            max-height: 450px;
-            border-radius: 12px;
-            margin: 15px 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            border: 2px solid #ff69b4;
-        }
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
 
-        /* ===== Bloques de código ===== */
-        pre, code {
-            background: #ffe4e6;  /* Rosado suave */
-            color: #333;
-            padding: 15px;
-            border-radius: 10px;
-            overflow-x: auto;
-            text-align: left;
-            font-size: 14px;
-            white-space: pre-wrap; /* Ajusta líneas largas */
-            word-wrap: break-word;
-        }
+iframe {
+    width: 100%;
+    max-height: 450px;
+    border-radius: 12px;
+    border: 2px solid #ff69b4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 15px 0;
+}
 
-        /* ===== Botón ===== */
-        .btn {
-            display: block;
-            margin: 30px auto 0 auto;
-            padding: 10px 20px;
-            background: #ff4d88;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: background 0.3s;
-        }
+img {
+    width: 100%;
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-        .btn:hover {
-            background: #e6005c;
-        }
-    </style>
+pre {
+    background: #ffe4e6;
+    color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: auto; /* Scroll vertical y horizontal si es necesario */
+    font-size: 14px;
+    text-align: left;
+    max-height: 400px;
+}
+
+.btn {
+    display: block;
+    margin: 25px auto 0 auto;
+    padding: 10px 20px;
+    background: #ff4d88;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: #e6005c;
+}
+</style>
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
+    <h1>Exámenes</h1>
 
-        <h1>Exámenes</h1>
-        
-        <h2>Examen Práctico</h2> 
+    <div class="seccion">
+        <h2>Examen Práctico</h2>
         <iframe src="https://drive.google.com/file/d/1M7dviVmX9Q293LfzCjx0ygOlDUjpC-sP/preview" allow="autoplay" allowfullscreen></iframe>
 
         <h2>Descripción</h2>
-        <p>
-            Un programa que resuelve un problema cotidiano, como gastos personales mensuales, usando funciones y Tkinter. 
-            El usuario ingresa gastos de transporte, comida y otros, y el programa los calcula y muestra si son gastos elevados o están en control.
-        </p>
+        <p>Un programa que resuelve un problema cotidiano, como gastos personales mensuales, usando funciones y Tkinter. 
+        El usuario ingresa gastos de transporte, comida y otros, y el programa los calcula y muestra si son gastos elevados o están en control.</p>
 
         <h2>Captura de la interfaz</h2>
         <img src="gastos.png" alt="Captura interfaz">
+    </div>
 
-        <h2>Examen Teórico</h2> 
+    <div class="seccion">
+        <h2>Examen Teórico</h2>
         <iframe src="https://drive.google.com/file/d/1GnYsVJ2cPtX75brycOw7d4xU76MsFxSn/preview" allow="autoplay" allowfullscreen></iframe>
 
         <h2>Descripción</h2>
-        <p>
-            Parte teórica de los elementos usados en el programa anterior (variables, librerías, funciones).
-        </p>
+        <p>Parte teórica de los elementos usados en el programa anterior (variables, librerías, funciones).</p>
+    </div>
 
+    <div class="seccion">
         <h2>Código fuente</h2>
-        <pre><code>
+        <pre>
+<code>
 # Importar las librerías
 import tkinter as tk           # Crear la interfaz de usuario
 from tkinter import messagebox # Permite mostrar mensajes de error
@@ -153,9 +161,11 @@ tk.Label(ventana, textvariable=resultado).pack()
 
 # Ejecutar la ventana
 ventana.mainloop()
-        </code></pre>
-
-        <a href="deberes.html" class="btn">⬅ Volver</a>
+</code>
+        </pre>
     </div>
+
+    <a href="deberes.html" class="btn">⬅ Volver</a>
+</div>
 </body>
 </html>
