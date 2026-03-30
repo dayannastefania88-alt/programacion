@@ -1,5 +1,114 @@
-<h2>Código fuente</h2>
-<pre><code>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecciones</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffc0cb, #ffb6c1);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #e60073;
+        }
+
+        h2 {
+            color: #ff4d88;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        iframe {
+            width: 80%;
+            max-width: 720px;
+            height: 405px;
+            border: 2px solid #ff69b4;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 12px;
+            margin-top: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Bloques de código rosado suave */
+        pre, code {
+            background: #ffe4e6;  /* Rosado suave */
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background: #ff4d88;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            background: #e6005c;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Exámenes</h1>
+    
+    <h2>Examen Práctico</h2> 
+    <iframe src="https://drive.google.com/file/d/1M7dviVmX9Q293LfzCjx0ygOlDUjpC-sP/preview" allow="autoplay" allowfullscreen></iframe>
+
+    <h2>Descripción</h2>
+    <p>
+        Un programa que resuelve un problema cotidiano, como gastos personales mensuales, usando funciones y Tkinter. 
+        El usuario ingresa gastos de transporte, comida y otros, y el programa los calcula y muestra si son gastos elevados o están en control.
+    </p>
+
+    <h2>Captura de la interfaz</h2>
+    <img src="gastos.png" alt="Captura interfaz">
+
+    <h2>Examen Teórico</h2> 
+    <iframe src="https://drive.google.com/file/d/1GnYsVJ2cPtX75brycOw7d4xU76MsFxSn/preview" allow="autoplay" allowfullscreen></iframe>
+
+    <h2>Descripción</h2>
+    <p>
+        Parte teórica de los elementos usados en el programa anterior (variables, librerías, funciones).
+    </p>
+
+    <h2>Código fuente</h2>
+    <pre><code>
 # Importar las librerías
 import tkinter as tk           # Crear la interfaz de usuario
 from tkinter import messagebox # Permite mostrar mensajes de error
@@ -43,4 +152,9 @@ tk.Label(ventana, textvariable=resultado).pack()
 
 # Ejecutar la ventana
 ventana.mainloop()
-</code></pre>
+    </code></pre>
+
+    <a href="deberes.html" class="btn">⬅ Volver</a>
+</div>
+</body>
+</html>
