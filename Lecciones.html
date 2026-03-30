@@ -55,15 +55,15 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        /* Bloques de código rosado bajito */
-        pre, code {
-            background: #ffe4e6;
+        pre {
+            background: #ffe4e6; /* rosa bajito */
             color: #333;
             padding: 15px;
             border-radius: 10px;
             overflow-x: auto;
             text-align: left;
             font-size: 14px;
+            white-space: pre-wrap; /* mantiene saltos de línea */
         }
 
         .btn {
@@ -97,7 +97,9 @@
         allowfullscreen>
     </iframe>
 
+    <!-- 📝 EXPLICACIÓN -->
     <h2>Descripción</h2>
+
     <p>
         En esta calculadora, se utiliza una <b>función</b> para calcular el Índice de Masa Corporal (IMC) 
         a partir del peso y la altura ingresados por el usuario. La función está <b>definida</b> para 
@@ -110,10 +112,14 @@
         lo que facilita la organización y reutilización del código.
     </p>
 
+    <!-- 🖼️ CAPTURA -->
     <h2>Captura de la interfaz</h2>
+
     <img src="imc.png" alt="Captura calculadora IMC">
 
+    <!-- 💻 CÓDIGO -->
     <h2>Código fuente</h2>
+
     <pre><code>
 # Función para calcular el IMC
 def calcularImc():
@@ -144,7 +150,6 @@ def calcularImc():
         resultado.set(f"IMC: {imc:.2f} - {estado}")
 
     except ValueError:
-        # Mostrar error si el usuario ingresa texto
         messagebox.showerror("Error", "Ingrese números válidos")
 
 
@@ -156,7 +161,7 @@ ventana.config(bg="plum")
 
 # Título
 tk.Label(ventana, text="Calculadora IMC", bg="plum",
-font=("arial",14,"bold")).pack()
+         font=("arial",14,"bold")).pack()
 
 # Entrada de peso
 tk.Label(ventana, text="Peso (kg)", bg="plum").pack()
@@ -170,14 +175,14 @@ entry_altura.pack()
 
 # Botón para calcular
 tk.Button(ventana, text="Calcular",
-command=calcularImc, bg="purple", fg="white").pack()
+          command=calcularImc, bg="purple", fg="white").pack()
 
 # Variable para mostrar resultado
 resultado = tk.StringVar()
 
 # Mostrar resultado
 tk.Label(ventana, textvariable=resultado,
-bg="plum", font=("arial",12,"bold")).pack()
+         bg="plum", font=("arial",12,"bold")).pack()
 
 # Ejecutar la aplicación
 ventana.mainloop()
