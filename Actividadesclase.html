@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Actividades en Clase  </title>
+    <title>Actividades en Clase</title>
 
     <style>
         body {
@@ -15,10 +15,10 @@
 
         .container {
             background: white;
-            width: 80%;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
@@ -26,11 +26,13 @@
         h1 {
             color: #e60073;
             margin-bottom: 20px;
+            font-size: 2rem;
         }
 
         h2 {
             color: #ff4d88;
             margin-top: 30px;
+            font-size: 1.5rem;
         }
 
         p {
@@ -42,17 +44,26 @@
         .video {
             margin-top: 25px;
             border-radius: 15px;
-            text-align: center; 
-            overflow: visible;  
+            text-align: center;
         }
 
         iframe {
-            width: 80%;        
-            max-width: 720px;  
-            height: 405px;     
-            border: none;
+            width: 100%;
+            max-width: 720px;
+            height: 405px;
+            border: 2px solid #ff69b4;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        pre, code {
             display: block;
-            margin: 0 auto;    
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 10px;
+            overflow-x: auto;
+            text-align: left;
+            font-size: 14px;
         }
 
         .btn {
@@ -75,256 +86,183 @@
 
 <div class="container">
 
-    <h1> Actividad : 1    </h1>
+    <h1>Actividad : 1</h1>
     
-    <h2> Calculadora con if y funciones  </h2> 
-    <div class="video" style="text-align:center; margin-top:20px;"> 
-    <iframe 
-        src="https://drive.google.com/file/d/1m31ivssnoGcVkDWRfu_DcqKYNhN8-2yb/preview" 
-        width="640" 
-        height="480" 
-        allow="autoplay" 
-        allowfullscreen
-        style="border:2px solid #ff69b4; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-    </iframe>
-</div>
+    <h2>Calculadora con if y funciones</h2> 
+    <div class="video">
+        <iframe 
+            src="https://drive.google.com/file/d/1m31ivssnoGcVkDWRfu_DcqKYNhN8-2yb/preview" 
+            allow="autoplay" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
-   <h2>Calculadora funciones e if </h2>
+    <p>
+        Esta calculadora utiliza funciones para realizar operaciones matemáticas, permitiendo organizar 
+        el código y reutilizarlo de manera eficiente.
+    </p>
 
-<p>
-
-    Esta calculadora utiliza funciones para realizar operaciones matemáticas, permitiendo organizar 
-    el código y reutilizarlo de manera eficiente.
-</p>
-<h2>Código fuente</h2>
-
-    <pre>
-<h2>Código fuente</h2>
-
-<pre>
-<code>
-    #Calculadora basica con funciones "+-*/"
-#Definir las funciones y lo que va a retronar
-def suma (a,b):
+    <h2>Código fuente</h2>
+    <pre><code>
+# Calculadora basica con funciones "+-*/"
+def suma(a,b):
     return a+b
-def resta (a,b):
+def resta(a,b):
     return a-b
-def multiplicacion (a,b):
+def multiplicacion(a,b):
     return a*b
-def division (a,b):
+def division(a,b):
     return a/b
-#Muestre el menu de ocpiones 
-print("**Calculadora basica** ")
+
+print("**Calculadora basica**")
 print("1.Suma")
 print("2.Resta")
 print("3.Multiplicacion")
 print("4.Division")
 opcion=int(input("Escoga un opcion del menu: "))
+
 if opcion in (1,2,3,4):
     num1=float(input("Ingrese el primer numero: "))
-    num2=float(input("Ingrese el segundo  numero: ")) #se usa para ingresar valores 
+    num2=float(input("Ingrese el segundo numero: "))
     if opcion ==1:
         print("Resultado:",suma(num1,num2))
-    elif opcion == 2:
+    elif opcion ==2:
         print("Resultado:",resta(num1,num2))
     elif opcion ==3:
         print("Resultado:",multiplicacion(num1,num2))
-    elif opcion==4:
+    elif opcion ==4:
         print("Resultado:",division(num1,num2))
-else :
-    print("Opcion invalida intente de nuevo ")
-    </code>
-</pre>
-    </pre>
+else:
+    print("Opcion invalida intente de nuevo")
+    </code></pre>
 
- <h1> Actividad : 2    </h1>
+    <h1>Actividad : 2</h1>
     
-    <h2>    Saludo personalizado tkinter  </h2> 
-
-    <div class="video" style="text-align:center; margin-top:20px;">
-    <iframe 
-        src="https://drive.google.com/file/d/1xgeZ0XueEcxgPoxgH1CG_f2FHL391zTV/preview" 
-        width="640" 
-        height="480" 
-        allow="autoplay" 
-        allowfullscreen
-        style="border:2px solid #ff69b4; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-    </iframe>
-</div>
-
-   <h2>Saludo Personalizado </h2>
-
-<p>
+    <h2>Saludo personalizado Tkinter</h2> 
+    <div class="video">
+        <iframe 
+            src="https://drive.google.com/file/d/1xgeZ0XueEcxgPoxgH1CG_f2FHL391zTV/preview" 
+            allow="autoplay" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
     <p>
-    En este programa se utiliza una función para generar un saludo personalizado a partir del nombre ingresado por el usuario. 
-    
-</p>
-</p>
-<h2>Código fuente</h2>
+        En este programa se utiliza una función para generar un saludo personalizado a partir del nombre ingresado por el usuario. 
+    </p>
 
-    <pre>
-<h2>Código fuente</h2>
-
-<pre>
-<code>
-    #importar libreria para que crear la interfaz 
+    <h2>Código fuente</h2>
+    <pre><code>
 import tkinter as tk
-from unittest import result 
+
 def saludar():
-    nombre=entry_nombre.get() #obtener el texto ingresado
-    edad=entry_edad.get()
-    print("Hola" , nombre , "tu edad es:" , edad )
+    nombre = entry_nombre.get()
+    edad = entry_edad.get()
     result.config(text=f"Hola {nombre}, tu edad es: {edad}")
 
-#crear la ventana
-ventana=tk.Tk () #Crear la ventana pricnipal
-ventana.geometry("300x300") #asiganr el tamaño a la ventana
+ventana = tk.Tk()
+ventana.geometry("300x300")
 ventana.title("Saludo personalizado")
-#contenedor
-frame=tk.Frame(ventana,bg="pink")
-frame.pack(fill="both", expand="true")
-#labe= etiqueta 
-label1= tk.Label(
-    frame,
-    text="Ingrese su nombre",
-    font=("Arial",16,"italic"),
-    bg="pink",
-    fg="black"
-)
-label1.pack()
-#xcaja de texto para ingresar el nombre
-entry_nombre= tk.Entry(frame)
+
+frame = tk.Frame(ventana, bg="pink")
+frame.pack(fill="both", expand=True)
+
+tk.Label(frame, text="Ingrese su nombre", font=("Arial",16,"italic"), bg="pink").pack()
+entry_nombre = tk.Entry(frame)
 entry_nombre.pack()
-#etiqueta que pedira la edad 
-label2= tk.Label(
-    frame,
-    text="Ingrese su edad",
-    font=("Arial",16,"italic"),
-    bg="pink",
-    fg="black"
-)
-label2.pack()
-#caja de texto para ingresar edad 
-entry_edad= tk.Entry(frame)
+
+tk.Label(frame, text="Ingrese su edad", font=("Arial",16,"italic"), bg="pink").pack()
+entry_edad = tk.Entry(frame)
 entry_edad.pack()
-#boton
-#boton que ejecutara el saludo 
-button=tk.Button(frame,text="Saludar", command=saludar)
-button.pack()
-#etiqueta que mostrara el resultado
-result=tk.Label(frame,text="", bg="pink",fg="black")
+
+tk.Button(frame, text="Saludar", command=saludar).pack()
+result = tk.Label(frame, text="", bg="pink")
 result.pack()
+
 ventana.mainloop()
-</code>
-</pre>
-    </pre>
+    </code></pre>
 
-
-
-<h1> Actividad : 3    </h1>
+    <h1>Actividad : 3</h1>
     
-    <h2>    Calculadora Tkinter </h2> 
+    <h2>Calculadora Tkinter</h2> 
+    <div class="video">
+        <iframe 
+            src="https://drive.google.com/file/d/1WTacM4ShvTiMsMQVY67uhqmbgO0jGP6I/preview" 
+            allow="autoplay" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
-    <div class="video" style="text-align:center; margin-top:20px;"> 
-    <iframe 
-        src="https://drive.google.com/file/d/1WTacM4ShvTiMsMQVY67uhqmbgO0jGP6I/preview" 
-        width="640" 
-        height="480" 
-        allow="autoplay" 
-        allowfullscreen
-        style="border:2px solid #ff69b4; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-    </iframe>
-    <h2>Calculadora tkinter</h2>
+    <p>
+        En esta actividad se desarrolla una calculadora utilizando la librería Tkinter de Python, 
+        la cual permite crear una interfaz gráfica para interactuar con el usuario. 
+    </p>
 
-<p>
-    En esta actividad se desarrolla una calculadora utilizando la librería Tkinter de Python, 
-    la cual permite crear una interfaz gráfica para interactuar con el usuario. 
-    
-</p>
+    <h2>Código fuente</h2>
+    <pre><code>
+import tkinter as tk
 
-    <pre>
-<h2>Código fuente</h2>
-
-<pre>
-<code>
-    #impirtar la libreria para crea interfaz
-import tkinter as tk 
-#definir las funciones
-def suma ():
-    n1= float(entry1.get())
-    n2= float(entry2.get()) #ingresar valores deicmales y enteros 
+def suma():
+    n1 = float(entry1.get())
+    n2 = float(entry2.get())
     resultado.config(text=f"Resultado : {n1+n2}")
-def resta ():
-    n1= float(entry1.get())
-    n2= float(entry2.get()) #ingresar valores deicmales y enteros 
+def resta():
+    n1 = float(entry1.get())
+    n2 = float(entry2.get())
     resultado.config(text=f"Resultado : {n1-n2}")
-def multiplicar ():
-    n1= float(entry1.get())
-    n2= float(entry2.get()) #ingresar valores deicmales y enteros 
+def multiplicar():
+    n1 = float(entry1.get())
+    n2 = float(entry2.get())
     resultado.config(text=f"Resultado : {n1*n2}")
-def dividir ():
-    n1= float(entry1.get())
-    n2= float(entry2.get()) #ingresar valores deicmales y enteros 
+def dividir():
+    n1 = float(entry1.get())
+    n2 = float(entry2.get())
     resultado.config(text=f"Resultado : {n1/n2}")
-#ventana
-ventana=tk.Tk() #crear la ventana
-ventana.geometry("300x300") #tamaño
-ventana.title("Calculadora Basica") # titulo
-#frame
-frame=tk.Frame(ventana,bg="yellow")
-frame.pack(fill="both",expand="true")
-#labels para la entrada de numeros
-tk.Label(frame,text="Ingrese el primer numero", bg="yellow").pack()
-#caja para ingeeso del primer numero 
-entry1=tk.Entry(frame)
+
+ventana = tk.Tk()
+ventana.geometry("300x300")
+ventana.title("Calculadora Basica")
+
+frame = tk.Frame(ventana, bg="yellow")
+frame.pack(fill="both", expand=True)
+
+tk.Label(frame, text="Ingrese el primer numero", bg="yellow").pack()
+entry1 = tk.Entry(frame)
 entry1.pack()
-tk.Label(frame,text="Ingrese el segundo numero", bg="yellow").pack()
-entry2=tk.Entry(frame)
+
+tk.Label(frame, text="Ingrese el segundo numero", bg="yellow").pack()
+entry2 = tk.Entry(frame)
 entry2.pack()
-#botones
-tk.Button(frame,text="Suma",command=suma , bg="orange3",fg="white").pack()
-tk.Button(frame,text="Resta",command=resta , bg="orange3",fg="white").pack()
-tk.Button(frame,text="Multiplicar",command=multiplicar , bg="orange3",fg="white").pack()
-tk.Button(frame,text="Dividir",command=dividir , bg="orange3",fg="white").pack()
-#label paramostrar resultado
-resultado=tk.Label(frame,text="Resultado",bg="yellow",fg="black")
+
+tk.Button(frame, text="Suma", command=suma, bg="orange3", fg="white").pack()
+tk.Button(frame, text="Resta", command=resta, bg="orange3", fg="white").pack()
+tk.Button(frame, text="Multiplicar", command=multiplicar, bg="orange3", fg="white").pack()
+tk.Button(frame, text="Dividir", command=dividir, bg="orange3", fg="white").pack()
+
+resultado = tk.Label(frame, text="Resultado", bg="yellow", fg="black")
 resultado.pack()
+
 ventana.mainloop()
-</code>
-</pre>
-    </pre>
+    </code></pre>
 
-</div>
-<h1> Actividad : 4    </h1>
+    <h1>Actividad : 4</h1>
     
-    <h2>    Calcular Promedios  </h2> 
+    <h2>Calcular Promedios</h2> 
+    <div class="video">
+        <iframe 
+            src="https://drive.google.com/file/d/1D6u_SW-hilZO878IcC3eSj3S_KQobr8T/preview" 
+            allow="autoplay" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
-    <div class="video" style="text-align:center; margin-top:20px;"> 
-    <iframe 
-        src="https://drive.google.com/file/d/1D6u_SW-hilZO878IcC3eSj3S_KQobr8T/preview" 
-        width="640" 
-        height="480" 
-        allow="autoplay" 
-        allowfullscreen
-        style="border:2px solid #ff69b4; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-    </iframe>
+    <p>
+        En esta actividad se desarrolla un programa para calcular el promedio de varias notas ingresadas por el usuario.
+    </p>
 
-    <h2>Calcular promedios y mostrar estados  </h2>
-
-<p>
-    En esta actividad se desarrolla un programa para calcular el promedio de varias notas 
-    ingresadas por el usuario.
-</p>
-<h2>Código fuente</h2>
-
-    <pre>
-<h2>Código fuente</h2>
-
-
-<pre>
-<code>
-    import tkinter as tk
+    <h2>Código fuente</h2>
+    <pre><code>
+import tkinter as tk
 
 lista = []
 
@@ -333,28 +271,23 @@ def agregarNotas():
         nota = float(entry.get())
         entry.delete(0, "end")
         lista.append(nota)
-
         result.config(text=f"Notas: {lista}")
         result_promedio.config(text=f"Promedio: {promedio()}")
 
 def promedio():
     if len(lista) == 0:
         return 0
-    suma = 0
-    for i in lista:
-        suma += i
-    return round(suma / len(lista), 2)
+    return round(sum(lista) / len(lista), 2)
 
 def estado():
     prom = promedio()
     if prom >= 6:
-        estado_label.config(text="Aprobado ", fg="green")
+        estado_label.config(text="Aprobado", fg="green")
     elif prom >= 4:
-        estado_label.config(text="Recuperación ", fg="orange")
+        estado_label.config(text="Recuperación", fg="orange")
     else:
-        estado_label.config(text="Reprobado ", fg="red")
+        estado_label.config(text="Reprobado", fg="red")
 
-# ventana
 ventana = tk.Tk()
 ventana.geometry("200x300")
 ventana.title("Notas")
@@ -363,141 +296,86 @@ ventana.config(bg="pink")
 frame = tk.Frame(ventana, bg="pink")
 frame.pack(fill="both", expand=True)
 
-label = tk.Label(frame, text="Ingrese sus notas",
-                 font=("Arial",12,"bold"),
-                 bg="pink", fg="blue")
-label.pack()
-
+tk.Label(frame, text="Ingrese sus notas", font=("Arial",12,"bold"), bg="pink", fg="blue").pack()
 entry = tk.Entry(frame, bg="white")
 entry.pack()
 
-button = tk.Button(frame, text="Agregar", command=agregarNotas, bg="pink", fg="blue")
-button.pack()
+tk.Button(frame, text="Agregar", command=agregarNotas, bg="pink", fg="blue").pack()
 result = tk.Label(frame, text="", bg="pink")
 result.pack()
-
 result_promedio = tk.Label(frame, text="", bg="pink")
 result_promedio.pack()
-
-btn_estado = tk.Button(frame, text="Ver Estado", command=estado, bg="pink", fg="blue")
-btn_estado.pack()
-
+tk.Button(frame, text="Ver Estado", command=estado, bg="pink", fg="blue").pack()
 estado_label = tk.Label(frame, text="", bg="pink")
 estado_label.pack()
 
 ventana.mainloop()
-</code>
-</pre>
-    </pre>
+    </code></pre>
 
-
-</div>
-<h1> Actividad : 5    </h1>
+    <h1>Actividad : 5</h1>
     
-    <h2>    Calculadora java  </h2> 
+    <h2>Calculadora Java</h2> 
+    <div class="video">
+        <iframe 
+            src="https://drive.google.com/file/d/110SSmDEQRuo7XC20E-s35RalbBRJ5vnx_/preview" 
+            allow="autoplay" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
-    <div class="video" style="text-align:center; margin-top:20px;"> 
-    <iframe 
-        src="https://drive.google.com/file/d/110SSmDEQRuo7XC20E-s35RalbBRJ5vnx_/preview" 
-        width="640" 
-        height="480" 
-        allow="autoplay" 
-        allowfullscreen
-        style="border:2px solid #ff69b4; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-    </iframe>
+    <p>
+        En esta actividad se realiza una calculadora en Java mostrada en clases usando funciones y estructuras switch y do while.
+    </p>
 
-    <h2>Calculadora en Java  </h2>
+    <h2>Código fuente</h2>
+    <pre><code>
+import java.util.Scanner;
 
-<p>
-    En esta actividad se realiza una calculadora en java mostrada en clases usando funciones y estructuras switch y do while 
-</p>
- <h2>Código fuente</h2>
+public class Main {
+    static Scanner sc = new Scanner(System.in);
 
-    <pre>
-<h2>Código fuente</h2>
+    public static void main(String[] args) {
+        int opcion;
+        header();
+        do {
+            System.out.println("\n..Menu..\n1...Sumar...\n2...Resta...\n3...Multiplicar...\n4...Dividir....\n0..Salir...");
+            opcion = pedirNumero("Elige una opcion: ");
+            if (opcion >=1 && opcion <=4){
+                int num1 = pedirNumero("Ingrese el primer numero: ");
+                int num2 = pedirNumero("Ingrese el segundo numero: ");
+                switch(opcion){
+                    case 1: System.out.println("Resultado "+ Sumar(num1,num2)); break;
+                    case 2: System.out.println("Resultado "+ Resta(num1,num2)); break;
+                    case 3: System.out.println("Resultado "+ Multiplicar(num1,num2)); break;
+                    case 4: System.out.println("Resultado "+ Dividir(num1,num2)); break;
+                    default: System.out.println("opcion invalida ");
+                }
+            } else if (opcion !=0){
+                System.out.println("opcion incorrecta");
+            }
+        } while (opcion != 0);
+        System.out.println("FIN");
+        sc.close();
+    }
 
-<pre>
-<code>
-    import java.util.Scanner;
+    public static void header(){
+        System.out.println("Calculadora");
+    }
 
-public class Main
-{
+    public static int pedirNumero(String mensaje){
+        System.out.print(mensaje);
+        return sc.nextInt();
+    }
 
-	static Scanner sc = new Scanner(System.in);
-
-	public static void main(String[] args) {
-	    int opcion ; //guardar lo que el usuario escribe
-	    header(); 
-	    //bucle que se repetira hasta que el usuario ingrese 0 
-	    do {
-	        //mostrar menu al usuario 
-	        System.out.println("\n..Menu..\n1...Sumar...\n2...Resta...\n3...Multiplicar...\n4...Dividir....\n0..Salir...");
-	        //llamar la funcion para pedir opcion 
-	        opcion = pedirNumero("Elige una opcion: ");
-	        //validar que se ingresen estas opciones
-	        if (opcion >=1 && opcion <=4){
-	            //pedir numeros al usuario 
-	            int num1 = pedirNumero("Ingrese el primer numero: ");
-	            int num2 = pedirNumero("Ingrese el segundo numero: ");
-	            //estructura switch
-	            switch(opcion){
-	                case 1 :
-	                    System.out.println("Resultado "+ Sumar(num1,num2));
-	                    break;
-	                     case 2 :
-	                    System.out.println("Resultado "+ Resta(num1,num2));
-	                    break;
-	                     case 3 :
-	                    System.out.println("Resultado "+ Multiplicar(num1,num2));
-	                    break;
-	                     case 4 :
-	                    System.out.println("Resultado "+ Dividir(num1,num2));
-	                    break;
-	                    default:
-	                    System.out.println("opcion invalida ");
-	            }
-	        } else if (opcion !=0){
-	            System.out.println("opcion incorreca");
-	            
-	        }
-	    }while ( opcion != 0); // se repire hata ingresar 0 
-	    System.out.println("FIN");
-	    sc.close();
-	}
-	//funcion del titulo 
-	public static void header(){
-	    System.out.println("Calculadora");
-	}
-	//funcion para pedir numeros al usuario 
-	public static int pedirNumero(String mensaje){
-	    System.out.print(mensaje);
-	    return sc.nextInt();
-	}
-	//funciones para las operaciones 
-	public static int Sumar(int a , int b){
-	    return a+ b ; 
-	}
-	public static int Resta(int a , int b){
-	    return a- b ; 
-	}
-	public static int Multiplicar(int a , int b){
-	    return a * b ; 
-	}
-	public static double  Dividir (int a , int b){
-	    if(b==0){
-	        System.out.println("no se puede dividir para 0 ");
-	        return 0 ; 
-	    }
-	    return (double) a/b ; 
-	}
+    public static int Sumar(int a , int b){ return a+b; }
+    public static int Resta(int a , int b){ return a-b; }
+    public static int Multiplicar(int a , int b){ return a*b; }
+    public static double Dividir(int a , int b){
+        if(b==0){ System.out.println("no se puede dividir para 0"); return 0; }
+        return (double) a/b;
+    }
 }
-</code>
-</pre>
-    </pre>
-
-</div>
-
-
+    </code></pre>
 
     <a href="deberes.html" class="btn">⬅ Volver</a>
 
