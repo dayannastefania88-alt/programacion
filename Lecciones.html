@@ -55,13 +55,15 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        pre {
-            background: #1e293b;
-            color: #f1f5f9;
+        /* Bloques de código rosado bajito */
+        pre, code {
+            background: #ffe4e6;
+            color: #333;
             padding: 15px;
             border-radius: 10px;
             overflow-x: auto;
             text-align: left;
+            font-size: 14px;
         }
 
         .btn {
@@ -84,7 +86,7 @@
 
 <div class="container">
 
-    <h1>lecciones</h1>
+    <h1>Lecciones</h1>
     
     <h2>Calculadora IMC (Índice de Masa Corporal)</h2> 
 
@@ -95,9 +97,7 @@
         allowfullscreen>
     </iframe>
 
-    <!-- 📝 EXPLICACIÓN -->
     <h2>Descripción</h2>
-
     <p>
         En esta calculadora, se utiliza una <b>función</b> para calcular el Índice de Masa Corporal (IMC) 
         a partir del peso y la altura ingresados por el usuario. La función está <b>definida</b> para 
@@ -110,19 +110,11 @@
         lo que facilita la organización y reutilización del código.
     </p>
 
-    <!-- 🖼️ CAPTURA -->
     <h2>Captura de la interfaz</h2>
-
     <img src="imc.png" alt="Captura calculadora IMC">
 
-    <!-- 💻 CÓDIGO -->
     <h2>Código fuente</h2>
-
-    <pre>
-<h2>Código fuente</h2>
-
-<pre>
-<code>
+    <pre><code>
 # Función para calcular el IMC
 def calcularImc():
     try:
@@ -189,9 +181,7 @@ bg="plum", font=("arial",12,"bold")).pack()
 
 # Ejecutar la aplicación
 ventana.mainloop()
-</code>
-</pre>
-    </pre>
+    </code></pre>
 
     <a href="deberes.html" class="btn">⬅ Volver</a>
 
