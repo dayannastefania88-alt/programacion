@@ -55,13 +55,15 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        pre {
-            background: #1e293b;
-            color: #f1f5f9;
+        /* Bloques de código rosado bajito */
+        pre, code {
+            background: #ffe4e6;
+            color: #333;
             padding: 15px;
             border-radius: 10px;
             overflow-x: auto;
             text-align: left;
+            font-size: 14px;
         }
 
         .btn {
@@ -87,98 +89,72 @@
     <h1>Exámenes</h1>
     
     <h2>Examen Práctico </h2> 
+    <iframe src="https://drive.google.com/file/d/1M7dviVmX9Q293LfzCjx0ygOlDUjpC-sP/preview" allow="autoplay" allowfullscreen></iframe>
 
-    <!-- 🎥 VIDEO --> 
-    <iframe 
-        src="https://drive.google.com/file/d/1M7dviVmX9Q293LfzCjx0ygOlDUjpC-sP/preview" 
-        allow="autoplay" 
-        allowfullscreen>
-    </iframe>
-
-    <!-- 📝 EXPLICACIÓN -->
     <h2>Descripción</h2>
-
     <p>
-       Un programa que resuelve un problema cotidiano tal como gastos personales mensuales usando funciones y tkinter donde el usuario ingresa gastos tales como transporte , comita y otros y el programa los calcula y muestra si son gastos elevados o gastos en control 
+       Un programa que resuelve un problema cotidiano, como gastos personales mensuales, usando funciones y Tkinter. 
+       El usuario ingresa gastos de transporte, comida y otros, y el programa los calcula y muestra si son gastos elevados o están en control.
     </p>
 
-    <!-- 🖼️ CAPTURA -->
     <h2>Captura de la interfaz</h2>
-
     <img src="gastos.png" alt="Captura interfaz">
 
-    <body>
+    <h2>Examen Teórico </h2> 
+    <iframe src="https://drive.google.com/file/d/1GnYsVJ2cPtX75brycOw7d4xU76MsFxSn/preview" allow="autoplay" allowfullscreen></iframe>
 
-<div class="container">
-
-    <h1>Exámenes</h1>
-    
-    <h2>Examen Teorico </h2> 
-
-    <!-- 🎥 VIDEO --> 
-    <iframe 
-        src="https://drive.google.com/file/d/1GnYsVJ2cPtX75brycOw7d4xU76MsFxSn/preview" 
-        allow="autoplay" 
-        allowfullscreen>
-    </iframe>
-
-    <!-- 📝 EXPLICACIÓN -->
     <h2>Descripción</h2>
-
     <p>
-       Parte teorica de los elementos usados en el programa anterios (variables librerias, funciones)
+       Parte teórica de los elementos usados en el programa anterior (variables, librerías, funciones).
     </p>
 
-<h2>Código fuente</h2>
+    <h2>Código fuente</h2>
+    <pre><code>
+# importar las librerias
+import tkinter as tk  # crear la interfaz de usuario
+from tkinter import messagebox  # permite mostrar mensajes de error 
 
-<pre>
-<code>
-#impotar las librerias
-import tkinter  as tk #crear la interfaz e usuario
-from tkinter import messagebox #nos permite mostar mensaje de error 
-#definir funciones
+# definir funciones
 # Es un bloque de codigo que permite ejecutar tarea o programa en especifico
-def calcular ():
+def calcular():
     try:
-        #variable el tipo de dato y  la funcion get para que guarde los datos que sean ingresados por caja texto 
-        n1=float(num1.get())
-        n2=float(num2.get())
-        #operador matematico + - * /
-        total = n1+n2   
-        #condicion if nos sirve para tomar desiciones y si la condicion se cumple el programa se ejecuta y caso contrario usamos else:
-        if total >10:
+        # variable el tipo de dato y la funcion get para que guarde los datos ingresados
+        n1 = float(num1.get())
+        n2 = float(num2.get())
+        # operador matematico + - * /
+        total = n1 + n2   
+        # condicion if
+        if total > 10:
             resultado.set(f"Total : {total} Es mayor a 10")
         else:
-             resultado.set(f"Total : {total} Es menor o igual  a 10")
+            resultado.set(f"Total : {total} Es menor o igual a 10")
     except ValueError:
-        messagebox.showerror("Error","Ingrese valores Validos") #para mosrtar mensaje d e error 
-        #crear la ventana 
-ventana=tk.Tk() #crear la ventana
+        messagebox.showerror("Error","Ingrese valores válidos")
+
+# crear la ventana
+ventana = tk.Tk()
 ventana.geometry("300x300")
 ventana.title("Ejemplo")
-#elementos widgets que iran en la ve¿entana 
-#label
-#caja de texto para ingresar datos 
-#botones
-#crear el label "Ingrese el primer numero"
-tk.Label(ventana,text="Ingrese el primer numero").pack()
-#cja de texto 
-num1=tk.Entry(ventana)
-num1.pack()
-tk.Label(ventana,text="Ingrese el psegundo numero  numero").pack()
-num2=tk.Entry(ventana)
-num2.pack()
-#boton para calcular 
-tk.Button(ventana,text="Calcular",command=calcular).pack()
-#label que muestre el resultado
-resultado=tk.StringVar()
-tk.Label(ventana,textvariable=resultado).pack()
-#ventana s eejecute y se mantenga abierta 
-ventana.mainloop()
 
-</code>
-</pre>
-    </pre>
+# elementos widgets
+tk.Label(ventana, text="Ingrese el primer numero").pack()
+num1 = tk.Entry(ventana)
+num1.pack()
+
+tk.Label(ventana, text="Ingrese el segundo numero").pack()
+num2 = tk.Entry(ventana)
+num2.pack()
+
+# boton para calcular 
+tk.Button(ventana, text="Calcular", command=calcular).pack()
+
+# label que muestre el resultado
+resultado = tk.StringVar()
+tk.Label(ventana, textvariable=resultado).pack()
+
+# ventana se ejecute y se mantenga abierta 
+ventana.mainloop()
+    </code></pre>
 
     <a href="deberes.html" class="btn">⬅ Volver</a>
 
