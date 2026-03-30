@@ -96,6 +96,46 @@
     Esta calculadora utiliza funciones para realizar operaciones matemáticas, permitiendo organizar 
     el código y reutilizarlo de manera eficiente.
 </p>
+<h2>Código fuente</h2>
+
+    <pre>
+<h2>Código fuente</h2>
+
+<pre>
+<code>
+    #Calculadora basica con funciones "+-*/"
+#Definir las funciones y lo que va a retronar
+def suma (a,b):
+    return a+b
+def resta (a,b):
+    return a-b
+def multiplicacion (a,b):
+    return a*b
+def division (a,b):
+    return a/b
+#Muestre el menu de ocpiones 
+print("**Calculadora basica** ")
+print("1.Suma")
+print("2.Resta")
+print("3.Multiplicacion")
+print("4.Division")
+opcion=int(input("Escoga un opcion del menu: "))
+if opcion in (1,2,3,4):
+    num1=float(input("Ingrese el primer numero: "))
+    num2=float(input("Ingrese el segundo  numero: ")) #se usa para ingresar valores 
+    if opcion ==1:
+        print("Resultado:",suma(num1,num2))
+    elif opcion == 2:
+        print("Resultado:",resta(num1,num2))
+    elif opcion ==3:
+        print("Resultado:",multiplicacion(num1,num2))
+    elif opcion==4:
+        print("Resultado:",division(num1,num2))
+else :
+    print("Opcion invalida intente de nuevo ")
+    </code>
+</pre>
+    </pre>
 
  <h1> Actividad : 2    </h1>
     
@@ -117,11 +157,71 @@
 <p>
 
     <p>
-    En este programa se utiliza una <b>función</b> para generar un saludo personalizado a partir del nombre ingresado por el usuario. 
-    La función recibe el nombre como parámetro y devuelve un mensaje de bienvenida, lo que permite hacer la interacción más dinámica. 
-    Esto ayuda a organizar el código y facilita su reutilización en diferentes partes del programa.
+    En este programa se utiliza una función para generar un saludo personalizado a partir del nombre ingresado por el usuario. 
+    
 </p>
 </p>
+<h2>Código fuente</h2>
+
+    <pre>
+<h2>Código fuente</h2>
+
+<pre>
+<code>
+    #importar libreria para que crear la interfaz 
+import tkinter as tk
+from unittest import result 
+def saludar():
+    nombre=entry_nombre.get() #obtener el texto ingresado
+    edad=entry_edad.get()
+    print("Hola" , nombre , "tu edad es:" , edad )
+    result.config(text=f"Hola {nombre}, tu edad es: {edad}")
+
+#crear la ventana
+ventana=tk.Tk () #Crear la ventana pricnipal
+ventana.geometry("300x300") #asiganr el tamaño a la ventana
+ventana.title("Saludo personalizado")
+#contenedor
+frame=tk.Frame(ventana,bg="pink")
+frame.pack(fill="both", expand="true")
+#labe= etiqueta 
+label1= tk.Label(
+    frame,
+    text="Ingrese su nombre",
+    font=("Arial",16,"italic"),
+    bg="pink",
+    fg="black"
+)
+label1.pack()
+#xcaja de texto para ingresar el nombre
+entry_nombre= tk.Entry(frame)
+entry_nombre.pack()
+#etiqueta que pedira la edad 
+label2= tk.Label(
+    frame,
+    text="Ingrese su edad",
+    font=("Arial",16,"italic"),
+    bg="pink",
+    fg="black"
+)
+label2.pack()
+#caja de texto para ingresar edad 
+entry_edad= tk.Entry(frame)
+entry_edad.pack()
+#boton
+#boton que ejecutara el saludo 
+button=tk.Button(frame,text="Saludar", command=saludar)
+button.pack()
+#etiqueta que mostrara el resultado
+result=tk.Label(frame,text="", bg="pink",fg="black")
+result.pack()
+ventana.mainloop()
+</code>
+</pre>
+    </pre>
+
+
+
 <h1> Actividad : 3    </h1>
     
     <h2>    Calculadora Tkinter </h2> 
@@ -140,11 +240,60 @@
 <p>
     En esta actividad se desarrolla una calculadora utilizando la librería Tkinter de Python, 
     la cual permite crear una interfaz gráfica para interactuar con el usuario. 
-    A través de botones y campos de entrada, el usuario puede ingresar datos y realizar 
-    operaciones matemáticas de manera sencilla. Además, se utilizan funciones para 
-    procesar los cálculos y mostrar los resultados en pantalla, logrando una aplicación 
-    organizada, funcional y fácil de usar.
+    
 </p>
+
+    <pre>
+<h2>Código fuente</h2>
+
+<pre>
+<code>
+    #impirtar la libreria para crea interfaz
+import tkinter as tk 
+#definir las funciones
+def suma ():
+    n1= float(entry1.get())
+    n2= float(entry2.get()) #ingresar valores deicmales y enteros 
+    resultado.config(text=f"Resultado : {n1+n2}")
+def resta ():
+    n1= float(entry1.get())
+    n2= float(entry2.get()) #ingresar valores deicmales y enteros 
+    resultado.config(text=f"Resultado : {n1-n2}")
+def multiplicar ():
+    n1= float(entry1.get())
+    n2= float(entry2.get()) #ingresar valores deicmales y enteros 
+    resultado.config(text=f"Resultado : {n1*n2}")
+def dividir ():
+    n1= float(entry1.get())
+    n2= float(entry2.get()) #ingresar valores deicmales y enteros 
+    resultado.config(text=f"Resultado : {n1/n2}")
+#ventana
+ventana=tk.Tk() #crear la ventana
+ventana.geometry("300x300") #tamaño
+ventana.title("Calculadora Basica") # titulo
+#frame
+frame=tk.Frame(ventana,bg="yellow")
+frame.pack(fill="both",expand="true")
+#labels para la entrada de numeros
+tk.Label(frame,text="Ingrese el primer numero", bg="yellow").pack()
+#caja para ingeeso del primer numero 
+entry1=tk.Entry(frame)
+entry1.pack()
+tk.Label(frame,text="Ingrese el segundo numero", bg="yellow").pack()
+entry2=tk.Entry(frame)
+entry2.pack()
+#botones
+tk.Button(frame,text="Suma",command=suma , bg="orange3",fg="white").pack()
+tk.Button(frame,text="Resta",command=resta , bg="orange3",fg="white").pack()
+tk.Button(frame,text="Multiplicar",command=multiplicar , bg="orange3",fg="white").pack()
+tk.Button(frame,text="Dividir",command=dividir , bg="orange3",fg="white").pack()
+#label paramostrar resultado
+resultado=tk.Label(frame,text="Resultado",bg="yellow",fg="black")
+resultado.pack()
+ventana.mainloop()
+</code>
+</pre>
+    </pre>
 
 </div>
 <h1> Actividad : 4    </h1>
@@ -165,13 +314,189 @@
 
 <p>
     En esta actividad se desarrolla un programa para calcular el promedio de varias notas 
-    ingresadas por el usuario. Se utilizan funciones para realizar el cálculo, sumando los 
-    valores y dividiéndolos entre la cantidad de datos. Además, el programa permite mostrar si el 
-    estudiante está aprobado recuperacion o  reprobadosegún el resultado obtenido, facilitando la 
-    interpretación de las calificaciones.
+    ingresadas por el usuario.
 </p>
+<h2>Código fuente</h2>
+
+    <pre>
+<h2>Código fuente</h2>
+
+
+<pre>
+<code>
+    import tkinter as tk
+
+lista = []
+
+def agregarNotas():
+    if entry.get() != "":
+        nota = float(entry.get())
+        entry.delete(0, "end")
+        lista.append(nota)
+
+        result.config(text=f"Notas: {lista}")
+        result_promedio.config(text=f"Promedio: {promedio()}")
+
+def promedio():
+    if len(lista) == 0:
+        return 0
+    suma = 0
+    for i in lista:
+        suma += i
+    return round(suma / len(lista), 2)
+
+def estado():
+    prom = promedio()
+    if prom >= 6:
+        estado_label.config(text="Aprobado ", fg="green")
+    elif prom >= 4:
+        estado_label.config(text="Recuperación ", fg="orange")
+    else:
+        estado_label.config(text="Reprobado ", fg="red")
+
+# ventana
+ventana = tk.Tk()
+ventana.geometry("200x300")
+ventana.title("Notas")
+ventana.config(bg="pink")
+
+frame = tk.Frame(ventana, bg="pink")
+frame.pack(fill="both", expand=True)
+
+label = tk.Label(frame, text="Ingrese sus notas",
+                 font=("Arial",12,"bold"),
+                 bg="pink", fg="blue")
+label.pack()
+
+entry = tk.Entry(frame, bg="white")
+entry.pack()
+
+button = tk.Button(frame, text="Agregar", command=agregarNotas, bg="pink", fg="blue")
+button.pack()
+result = tk.Label(frame, text="", bg="pink")
+result.pack()
+
+result_promedio = tk.Label(frame, text="", bg="pink")
+result_promedio.pack()
+
+btn_estado = tk.Button(frame, text="Ver Estado", command=estado, bg="pink", fg="blue")
+btn_estado.pack()
+
+estado_label = tk.Label(frame, text="", bg="pink")
+estado_label.pack()
+
+ventana.mainloop()
+</code>
+</pre>
+    </pre>
+
 
 </div>
+<h1> Actividad : 5    </h1>
+    
+    <h2>    Calculadora java  </h2> 
+
+    <div class="video" style="text-align:center; margin-top:20px;"> 
+    <iframe 
+        src="https://drive.google.com/file/d/110SSmDEQRuo7XC20E-s35RalbBRJ5vnx_/preview" 
+        width="640" 
+        height="480" 
+        allow="autoplay" 
+        allowfullscreen
+        style="border:2px solid #ff69b4; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    </iframe>
+
+    <h2>Calculadora en Java  </h2>
+
+<p>
+    En esta actividad se realiza una calculadora en java mostrada en clases usando funciones y estructuras switch y do while 
+</p>
+ <h2>Código fuente</h2>
+
+    <pre>
+<h2>Código fuente</h2>
+
+<pre>
+<code>
+    import java.util.Scanner;
+
+public class Main
+{
+
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+	    int opcion ; //guardar lo que el usuario escribe
+	    header(); 
+	    //bucle que se repetira hasta que el usuario ingrese 0 
+	    do {
+	        //mostrar menu al usuario 
+	        System.out.println("\n..Menu..\n1...Sumar...\n2...Resta...\n3...Multiplicar...\n4...Dividir....\n0..Salir...");
+	        //llamar la funcion para pedir opcion 
+	        opcion = pedirNumero("Elige una opcion: ");
+	        //validar que se ingresen estas opciones
+	        if (opcion >=1 && opcion <=4){
+	            //pedir numeros al usuario 
+	            int num1 = pedirNumero("Ingrese el primer numero: ");
+	            int num2 = pedirNumero("Ingrese el segundo numero: ");
+	            //estructura switch
+	            switch(opcion){
+	                case 1 :
+	                    System.out.println("Resultado "+ Sumar(num1,num2));
+	                    break;
+	                     case 2 :
+	                    System.out.println("Resultado "+ Resta(num1,num2));
+	                    break;
+	                     case 3 :
+	                    System.out.println("Resultado "+ Multiplicar(num1,num2));
+	                    break;
+	                     case 4 :
+	                    System.out.println("Resultado "+ Dividir(num1,num2));
+	                    break;
+	                    default:
+	                    System.out.println("opcion invalida ");
+	            }
+	        } else if (opcion !=0){
+	            System.out.println("opcion incorreca");
+	            
+	        }
+	    }while ( opcion != 0); // se repire hata ingresar 0 
+	    System.out.println("FIN");
+	    sc.close();
+	}
+	//funcion del titulo 
+	public static void header(){
+	    System.out.println("Calculadora");
+	}
+	//funcion para pedir numeros al usuario 
+	public static int pedirNumero(String mensaje){
+	    System.out.print(mensaje);
+	    return sc.nextInt();
+	}
+	//funciones para las operaciones 
+	public static int Sumar(int a , int b){
+	    return a+ b ; 
+	}
+	public static int Resta(int a , int b){
+	    return a- b ; 
+	}
+	public static int Multiplicar(int a , int b){
+	    return a * b ; 
+	}
+	public static double  Dividir (int a , int b){
+	    if(b==0){
+	        System.out.println("no se puede dividir para 0 ");
+	        return 0 ; 
+	    }
+	    return (double) a/b ; 
+	}
+}
+</code>
+</pre>
+    </pre>
+
+</div>
+
 
 
     <a href="deberes.html" class="btn">⬅ Volver</a>

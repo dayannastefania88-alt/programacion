@@ -22,11 +22,11 @@ def promedio():
 def estado():
     prom = promedio()
     if prom >= 6:
-        estado_label.config(text="Aprobado ✅", fg="green")
+        estado_label.config(text="Aprobado ", fg="green")
     elif prom >= 4:
-        estado_label.config(text="Recuperación ⚠️", fg="orange")
+        estado_label.config(text="Recuperación ", fg="orange")
     else:
-        estado_label.config(text="Reprobado ❌", fg="red")
+        estado_label.config(text="Reprobado ", fg="red")
 
 # ventana
 ventana = tk.Tk()
