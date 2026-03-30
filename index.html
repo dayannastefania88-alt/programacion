@@ -1,61 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Programacion y Desarrollo de software</title>
+<title>Programación y Desarrollo de Software</title>
 
 <style>
-body{
+/* Estilos generales */
+body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ffb6cc, #ffc0cb);
+    background: linear-gradient(135deg, #ffb6cc, #ffc0cb, #ff99bb);
     text-align: center;
     margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.portada{
-    margin-top: 150px;
+/* Contenedor central */
+.portada {
+    max-width: 700px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.25); /* ligero fondo transparente */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* sombra suave */
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
-h1{
+/* Animación de aparición */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título */
+h1 {
     color: #333;
-    font-size: 40px;
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
-p{
+/* Texto */
+p {
     font-size: 20px;
+    margin-bottom: 30px;
 }
 
-.boton{
+/* Botón */
+.boton {
     display: inline-block;
-    margin-top: 30px;
-    padding: 12px 25px;
+    padding: 12px 30px;
     background: #ff4d88;
     color: white;
     text-decoration: none;
     border-radius: 10px;
     font-size: 18px;
+    transition: all 0.3s ease;
 }
 
-.boton:hover{
+.boton:hover {
     background: #e6005c;
+    transform: scale(1.05);
 }
 </style>
 
 </head>
-
 <body>
 
 <div class="portada">
-
-<h1>Programación y Desarrollo de Software</h1>
-
-<p><b>Desarrollado por:</b> Dayanna Montaño</p>
-
-<a href="deberes.html" class="boton">Visitar Deberes</a>
-
+    <h1>Programación y Desarrollo de Software</h1>
+    <p><b>Desarrollado por:</b> Dayanna Montaño</p>
+    <a href="deberes.html" class="boton">Visitar Deberes</a>
 </div>
 
 </body>
